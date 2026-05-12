@@ -1,0 +1,16 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+
+# Environments
+.env
+venvs/
+
+# macOS
+.DS_Store
+
+# ADK session data
+email_listing_agent/.adk/
+
+# misc
+notes.txt
+sample_client/

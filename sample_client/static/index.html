@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Gemini Agent Runtime Client</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+
+<body>
+  <!-- Header bar -->
+  <div id="header">
+    <div class="header-title-group">
+      <div class="header-logo">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2L2 7L12 12L22 7L12 2Z" fill="white" />
+          <path d="M2 17L12 22L22 17" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M2 12L12 17L22 12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </div>
+      <span class="header-title">Mail and Weather Agent</span>
+    </div>
+    <div id="user-info-container">
+      <div class="status-badge">
+        <div class="status-dot"></div>
+        <span>Active</span>
+      </div>
+      <div id="user-badge">Guest</div>
+      <div id="session-badge">No Session</div>
+    </div>
+  </div>
+
+  <!-- Login Floating Container -->
+  <div id="login-container">
+    <div class="login-card">
+      <div class="login-logo-container">
+        <div class="login-logo">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M20 4H4C2.9 4 2.01 4.9 2.01 6L2 18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 18H4V8L12 13L20 8V18ZM12 11L4 6H20L12 11Z"
+              fill="white" />
+          </svg>
+        </div>
+      </div>
+      <h2>Access Mail and Weather Agent</h2>
+      <p>Authenticate with your custom User ID to initiate a secure AI session over your mailbox.</p>
+      <div class="input-group">
+        <label for="loginUserId">Select User ID</label>
+        <input type="text" id="loginUserId" placeholder="e.g. testuser" onkeypress="if(event.key==='Enter') login()"
+          autofocus />
+      </div>
+      <button class="btn-submit" onclick="login()">Connect Securely</button>
+    </div>
+  </div>
+
+  <!-- Scrollable Chat Window -->
+  <div id="chat-wrapper">
+    <div id="chat">
+      <div class="msg-container agent">
+        <div class="msg">Welcome to Mail Agent. Ask me anything about your recent emails or the weather.</div>
+        <div class="meta-info">Agent • Just now</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Input Control Panel -->
+  <div id="input-container">
+    <div id="controls">
+      <input type="text" id="userInput" placeholder="Type a message..." autocomplete="off" />
+      <button id="sendBtn" onclick="send()">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M22 2L11 13" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M22 2L15 22L11 13L2 9L22 2Z" fill="white" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <script src="/script.js" defer></script>
+</body>
+
+</html>

@@ -9,7 +9,7 @@ venvs/
 .DS_Store
 
 # ADK session data
-email_listing_agent/.adk/
+.adk/
 
 # misc
 notes.txt

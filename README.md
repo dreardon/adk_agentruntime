@@ -107,13 +107,15 @@ pip install -r requirements.txt
 python deploy.py
 ```
 
-After the first deployment, you'll have an Agent Identity and can complete the following. The deployed agent is given access to all of the Auth Providers in the project created in the previous steps. As a best practice, you could also grant [specific connector-level access](https://docs.cloud.google.com/iam/docs/auth-with-3lo#connector-level-curl) via curl.
-
+After the first deployment, you'll have an Agent Identity and can complete the following:
 ```bash
 gcloud projects add-iam-policy-binding $GOOGLE_CLOUD_PROJECT \
     --role='roles/iamconnectors.user' \
     --member="principal://agents.global.org-[ORGANIZATION_ID].system.id.goog/resources/aiplatform/projects/[GOOGLE_CLOUD_PROJECT_NUMBER]/locations/$GOOGLE_CLOUD_LOCATION/reasoningEngines/ENGINE_ID"
 ```
+
+With the above command, the deployed agent identity is given access to all of the Auth Providers in the project. As a best practice, you could also grant [specific connector-level access](https://docs.cloud.google.com/iam/docs/auth-with-3lo#connector-level-curl) via curl.
+
 
 ## Validate Locally (Using a Sample Client and ADK Web)
 
@@ -123,6 +125,7 @@ Set the following environment variable and run the ADK UI.
 ```
 export GOOGLE_GENAI_USE_VERTEXAI=True
 source venvs/bin/activate
+pip install -r requirements.txt
 adk web
 ```
 

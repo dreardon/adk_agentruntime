@@ -37,7 +37,7 @@ We'll use Gmail access for this demo to allow the agent to access a user's email
 1. Go to the **APIs & Services > Credentials** page in the Google Cloud Console.
 2. Click **Create Credentials > OAuth client ID**.
 3. Select **Web application** as the application type.
-4. Add your authorized redirect URIs. Agent Identity Auth Provider will generate the required redirect URI for you after the 3LO creation below. Current guidance can be found in the [Gemini Enterprise Agent Deployment Walkthrough](https://docs.cloud.google.com/gemini/enterprise/internal/agent-deployment-walkthrough).
+4. Add your authorized redirect URIs. Agent Identity Auth Provider will generate the required redirect URI for you after the 3LO creation below.
 5. Save the **Client ID** and **Client Secret**. You will need these to configure the Auth Provider.
 
 ### 2. Auth Provider 1: Create a 3LO Auth Provider in IAM
